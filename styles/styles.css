@@ -1,0 +1,157 @@
+@import url("sobre.css");
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --preto: #000;
+    --cinza: #272727;
+    --branco: #F6F6F6;
+    --azul: #22D4FD;
+    --azul-escuro: #20b7d8;
+    --fonte-principal: "Krona One";
+    --fonte-secund: "Montserrat";
+}
+
+body {
+    background-color: var(--preto);
+    font-family: var(--fonte-secund);
+    font-size: 24px;
+    box-sizing: border-box;/*imagens ficam contidas no elemento pai, sem estrapolar o tamanho para fora das bordas.*/
+    line-height: 1.2em;
+    letter-spacing: .05rem;
+}
+
+/* Header */
+
+.cabecalho {
+    margin: 3em 10%;
+}
+
+.cabecalho_lista {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.cabecalho_item {
+    margin-right: 3em;
+}
+
+.cabecalho_link {
+    text-decoration: none;
+    color: var(--azul);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+/* Main */
+
+.portfolio {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin: 7% 10%;
+}
+
+.texto {
+    display: flex;
+    flex-flow: column;
+    text-align: left;
+    justify-content: flex-start;
+    margin-right: 3.5em;
+}
+
+.titulo {
+    font-family: var(--fonte-principal);
+    color: #F6F6F6;
+    font-size: 36px;
+    line-height: 1.5em;
+    font-weight: 400;
+}
+
+.destaque {
+    color: var(--azul);
+}
+
+.descricao {
+    font-family: var(--fonte-secund);
+    color: #F6F6F6;
+    font-size: 24px;
+    margin: 1.5em 0 2em 0;
+}
+
+.botoes_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: .2em;
+}
+
+.botoes_titulo {
+    color: var(--branco);
+    font-family: var(--fonte-principal);
+    font-weight: 400;
+    font-size: 24px;
+}
+
+.botoes_lista {
+    margin-top: 1em;
+}
+
+.botoes_item {
+    padding: .75em 3em;
+    border: 2px solid var(--azul);
+    border-radius: 10px;
+    text-align: right;
+    transition: .2s;
+}
+
+.botoes_item:hover {
+    background-color: var(--cinza);
+}
+
+.botoes_meio {
+    margin: 1em 0;
+}
+
+.botoes_link {
+    text-decoration: none;
+    color: var(--branco);
+    font-weight: 600;
+    font-size: 24px;
+    padding: 0 2.5em;
+
+}
+
+.github {
+    background: url("../assets/Github.png") no-repeat;
+    background-position: left;
+}
+
+.linkedin {
+    background: url("../assets/Linkedin.png") no-repeat;
+    background-position: left;
+}
+
+.twitch {
+    background: url("../assets/Twitch.png") no-repeat;
+    background-position: left;
+}
+
+/* Rodapé */
+
+.rodape {
+    background-color: var(--azul);
+
+}
+
+.rodape_texto {
+    font-family: var(--fonte-secund);
+    font-weight: 400;
+    font-size: 24px;
+    text-align: center;
+    padding: 1em;
+}
