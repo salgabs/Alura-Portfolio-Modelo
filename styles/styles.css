@@ -1,5 +1,3 @@
-@import url("sobre.css");
-
 * {
     margin: 0;
     padding: 0;
@@ -18,7 +16,7 @@
 body {
     background-color: var(--preto);
     font-family: var(--fonte-secund);
-    font-size: 24px;
+    font-size: 1.5rem;
     box-sizing: border-box;/*imagens ficam contidas no elemento pai, sem estrapolar o tamanho para fora das bordas.*/
     line-height: 1.2em;
     letter-spacing: .05rem;
@@ -27,12 +25,16 @@ body {
 /* Header */
 
 .cabecalho {
-    margin: 3em 10%;
+    margin: 4em 10% 3em 10%;
+}
+
+.cabecalho_nav {
+    display: flex;
+    justify-content: flex-start;
 }
 
 .cabecalho_lista {
     display: flex;
-    justify-content: flex-start;
 }
 
 .cabecalho_item {
@@ -53,6 +55,7 @@ body {
     justify-content: center;
     align-items: flex-start;
     margin: 7% 10%;
+    gap: 1em;
 }
 
 .texto {
@@ -66,7 +69,7 @@ body {
 .titulo {
     font-family: var(--fonte-principal);
     color: #F6F6F6;
-    font-size: 36px;
+    font-size: 2.25rem;
     line-height: 1.5em;
     font-weight: 400;
 }
@@ -78,7 +81,7 @@ body {
 .descricao {
     font-family: var(--fonte-secund);
     color: #F6F6F6;
-    font-size: 24px;
+    font-size: 1.5rem;
     margin: 1.5em 0 2em 0;
 }
 
@@ -87,58 +90,50 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-left: .2em;
 }
 
 .botoes_titulo {
     color: var(--branco);
     font-family: var(--fonte-principal);
     font-weight: 400;
-    font-size: 24px;
+    font-size: 1.5rem;
 }
 
 .botoes_lista {
+    display:  flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 1em;
     margin-top: 1em;
+    width: 50%;
 }
 
 .botoes_item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
     padding: .75em 3em;
     border: 2px solid var(--azul);
     border-radius: 10px;
-    text-align: right;
+    text-align: center;
     transition: .2s;
+    width: 60%;
 }
 
 .botoes_item:hover {
     background-color: var(--cinza);
 }
 
-.botoes_meio {
-    margin: 1em 0;
-}
-
 .botoes_link {
     text-decoration: none;
     color: var(--branco);
     font-weight: 600;
-    font-size: 24px;
-    padding: 0 2.5em;
-
+    font-size: 1.5rem;
 }
 
-.github {
-    background: url("../assets/Github.png") no-repeat;
-    background-position: left;
-}
-
-.linkedin {
-    background: url("../assets/Linkedin.png") no-repeat;
-    background-position: left;
-}
-
-.twitch {
-    background: url("../assets/Twitch.png") no-repeat;
-    background-position: left;
+.descricao_imagem {
+    width: 60%;
 }
 
 /* Rodapé */
@@ -151,7 +146,34 @@ body {
 .rodape_texto {
     font-family: var(--fonte-secund);
     font-weight: 400;
-    font-size: 24px;
+    font-size: 1.5rem;
     text-align: center;
     padding: 1em;
+}
+
+@media (max-width: 1200px) {
+
+    .cabecalho {
+        margin-bottom: 5em;
+    }
+
+    .cabecalho_nav {
+        text-align: center;
+        justify-content: center;
+    }
+
+    .portfolio {
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: center;
+        gap: 3em;
+        width: auto;
+    }
+
+    .texto {
+        gap: .5em;
+        margin: 0;
+        text-align: center;
+    }
+
 }
